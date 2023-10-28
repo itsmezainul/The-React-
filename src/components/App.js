@@ -84,7 +84,7 @@ export default function App() {
     return acc + curr.points;
   }, 0);
   useEffect(function () {
-    fetch("http://localhost:8000/questions")
+    fetch("https://json-server-8yb8.onrender.com/questions")
       .then((res) => res.json())
       .then((data) => dispatcher({ type: "dataRecieved", payload: data }))
       .catch((err) => dispatcher({ type: "dataFailed" }));
