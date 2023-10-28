@@ -48,7 +48,7 @@ function reducer(state, action) {
             : state.points,
       };
     case "nextQuestion":
-      return { ...state, index: state.index++, answer: null };
+      return { ...state, index: state.index + 1, answer: null };
     case "finished":
       return {
         ...state,
